@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  transfer:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: transfer-app
+    ports:
+      - "8081:8081"
+    environment:
+      NODE_ENV: production
+    volumes:
+      - ./uploads:/app/uploads   #  必须
+    restart: unless-stopped
+    mem_limit: 2g
