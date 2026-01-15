@@ -1,0 +1,21 @@
+# file-transfer/.gitignore
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# 上传文件目录（非常重要！不要提交用户上传的文件）
+uploads/
+uploads/*
+
+# Docker 相关临时文件
+*.log
+Dockerfile.*
+docker-compose.override.yml
+
+# 编辑器/系统文件
+.DS_Store
+.vscode/
+.idea/
+*.swp
